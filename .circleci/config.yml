@@ -12,6 +12,6 @@ jobs:
       - checkout
       - run:
           name: "Run Build step"
-          command: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\Community\\Common7\\IDE\\devenv.com RedstoneLauncher.sln /Build Release""
+          command: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.com" RedstoneLauncher.sln /Build Release'
       - store_artifacts:
           path: .\bin\Release\RedstoneLauncher.exe
