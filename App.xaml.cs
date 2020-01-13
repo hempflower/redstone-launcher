@@ -17,12 +17,12 @@ namespace RedstoneLauncher
         private static Logger logger { get; } = new Logger();
         protected override void OnStartup(StartupEventArgs e)
         {
-            Console.WriteLine("Redstone Launcher 1.0.0");
+            getLogger().Info("Redstone Launcher " + Useful.getLauncherVersion());
         }
         public static Logger getLogger()
         {
             return logger;
         }
-        
+
     }
 }

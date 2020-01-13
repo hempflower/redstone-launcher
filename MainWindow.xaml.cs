@@ -23,9 +23,6 @@ namespace RedstoneLauncher
         public MainWindow()
         {
             InitializeComponent();
-            App.getLogger().Debug("Hello,world!");
-            MessageBox.Show(App.getLogger().dump());
-
         }
     }
 }
