@@ -1,0 +1,15 @@
+version: 1.0.{build}
+image: Visual Studio 2019
+configuration: Release
+platform: Any CPU
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+build:
+  project: RedstoneLauncher.sln
+  verbosity: minimal
+artifacts:
+- path: .\bin\Release\RedstoneLauncher.exe
