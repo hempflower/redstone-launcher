@@ -9,7 +9,7 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 before_build:
-- ps: dotnet restore
+- ps: nuget restore RedstoneLauncher.sln
 build:
   project: RedstoneLauncher.sln
   verbosity: minimal
