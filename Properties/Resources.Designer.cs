@@ -59,15 +59,5 @@ namespace RedstoneLauncher.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   查找 System.Byte[] 类型的本地化资源。
-        /// </summary>
-        public static byte[] NotoSansHans_Regular {
-            get {
-                object obj = ResourceManager.GetObject("NotoSansHans_Regular", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

@@ -10,7 +10,6 @@
         Background="{DynamicResource MaterialDesignPaper}"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
-        FontFamily="/RedstoneLauncher;component/Resources/#Noto Sans S Chinese Regular"
         Title="Redstone Launcher"
         Height="600"
         Width="850" 
