@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using RedstoneLauncher.tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -23,6 +26,34 @@ namespace RedstoneLauncher
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void TestPage()
+        {
+
+        }
+
+        public void MainPage()
+        {
+
+        }
+
+        private void ColorZone_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void min_window(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void close_window(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

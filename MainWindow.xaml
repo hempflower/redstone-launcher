@@ -4,9 +4,45 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RedstoneLauncher"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="/RedstoneLauncher;component/Resources/#Noto Sans S Chinese Regular"
+        Title="Redstone Launcher"
+        Height="600"
+        Width="850" 
+        WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" WindowStyle="None" 
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+        <SolidColorBrush x:Key="MaterialDesignFlatButtonClick" Color="#19757575" />
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
-        
+        <DockPanel>
+            <materialDesign:ColorZone Padding="8" materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                            Mode="PrimaryMid" DockPanel.Dock="Top" MouseMove="ColorZone_MouseMove">
+                <DockPanel>
+                    <Button x:Name="home_btn" Style="{StaticResource MaterialDesignIconForegroundButton}">
+                        <materialDesign:PackIcon Kind="HomeOutline" />
+                    </Button>
+                    <Button x:Name="close_btn"  DockPanel.Dock="Right" Style="{StaticResource MaterialDesignIconForegroundButton}" Click="close_window" >
+                        <materialDesign:PackIcon Kind="WindowClose" />
+                    </Button>
+                    <Button x:Name="min_btn"  DockPanel.Dock="Right" Style="{StaticResource MaterialDesignIconForegroundButton}" Click="min_window">
+                        <materialDesign:PackIcon Kind="WindowMinimize" />
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Redstone Launcher</TextBlock>
+                </DockPanel>
+            </materialDesign:ColorZone>
+            <Grid>
+                <ContentControl>
+                </ContentControl>
+                <materialDesign:Snackbar MessageQueue="{materialDesign:MessageQueue}" x:Name="MainSnackbar" Grid.Row="1" />
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>
