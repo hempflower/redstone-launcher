@@ -1,4 +1,5 @@
 ﻿using MaterialDesignThemes.Wpf;
+using RedstoneLauncher.pages;
 using RedstoneLauncher.tools;
 using System;
 using System.Collections.Generic;
@@ -26,16 +27,7 @@ namespace RedstoneLauncher
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        public void TestPage()
-        {
-
-        }
-
-        public void MainPage()
-        {
-
+            main_content.Content = new Home();
         }
 
         private void ColorZone_MouseMove(object sender, MouseEventArgs e)

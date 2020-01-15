@@ -1,0 +1,28 @@
+﻿<Page x:Class="RedstoneLauncher.pages.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RedstoneLauncher.pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid  VerticalAlignment="Top" Margin="56" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Stretch="Uniform" Width="100" Height="100" Source="Block_of_Redstone_JE2_BE2.png" />
+            <StackPanel  Grid.Column="1" Margin="24 0 0 0" VerticalAlignment="Center">
+                <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}" TextWrapping="Wrap">晚上好{USERNAME}，Redstone Launcher 1.2发布了，记得去看看哦。</TextBlock>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
